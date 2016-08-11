@@ -40,6 +40,7 @@ describe('LibraryView', function() {
       xhr = sinon.useFakeXMLHttpRequest();
       xhr.onCreate = function(request) {
         requests.push(request);
+        console.log('inside onCreate');
       };
 
       fakeResponse = JSON.stringify({ results: fakeSongData });
